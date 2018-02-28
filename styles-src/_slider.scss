@@ -1,0 +1,20 @@
+.contenedor {
+    display: block;
+    max-height: 400px;
+    max-width: 900px;
+}
+
+.image-slider {
+    max-height: 400px;
+    min-height: 200px;
+    filter: brightness(0.4)
+}
+
+.slider-text{
+    color: white; 
+    text-align: left
+}
+
+.carousel-inner{
+    height: 100%;    
+}

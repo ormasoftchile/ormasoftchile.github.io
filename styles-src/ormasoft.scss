@@ -1,0 +1,77 @@
+/*!
+ * 
+ */
+@import "ormasoft-variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "_aurelia-dialog";
+@import "_bootstrap-select";
+@import "_datepicker";
+@import "_change";
+@import "_solution";
+@import "_slider";
+@import "_client";
+@import "_partners-box";
+@import "_contact";
+
+.splash {
+  text-align: center;
+  margin: 10% 0 0 0;
+  box-sizing: border-box;
+}
+
+.splash .message {
+  font-size: 72px;
+  line-height: 72px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0 15px;
+  //text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.splash .fa-spinner {
+  text-align: center;
+  display: inline-block;
+  font-size: 72px;
+  margin-top: 50px;
+}
+
+.page-host {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 48px;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+section {
+  margin-top: 6px;
+}
+
+@media (min-width: 768px) {
+/* esto hace que una toolbar se vea alineada verticalmente. Debe hacerse el cálculo con
+   variables */
+.navbar-left, .navbar-left {
+    margin-top: 6px;
+}
+}
+
+.input-group {
+  width: 100% !important;
+}
+
+/* navbar de rayen */
+.toolbar .navbar.navbar-reverse {
+  background: $body-bg;//rgba(224,234,254,1);
+  // background: -moz-linear-gradient(top, rgba(224,234,254,1) 0%, rgba(198,216,252,1) 49%, rgba(134,147,196,1) 100%);
+  // background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(224,234,254,1)), color-stop(49%, rgba(198,216,252,1)), color-stop(100%, rgba(134,147,196,1)));
+  // background: -webkit-linear-gradient(top, rgba(224,234,254,1) 0%, rgba(198,216,252,1) 49%, rgba(134,147,196,1) 100%);
+  // background: -o-linear-gradient(top, rgba(224,234,254,1) 0%, rgba(198,216,252,1) 49%, rgba(134,147,196,1) 100%);
+  // background: -ms-linear-gradient(top, rgba(224,234,254,1) 0%, rgba(198,216,252,1) 49%, rgba(134,147,196,1) 100%);
+  // background: linear-gradient(to bottom, rgba(224,234,254,1) 0%, rgba(198,216,252,1) 49%, rgba(134,147,196,1) 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0eafe', endColorstr='#8693c4', GradientType=0 );
+}
+
+nav {
+  z-index: 1001;
+}

@@ -1,15 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Aurelia</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
+<html lang="es">
 
-  <body aurelia-app="main">
-    <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
-  </body>
+<head>
+    <meta charset="utf-8">
+    <title>rayen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/ormasoft.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+</head>
+
+<body aurelia-app="main">
+    <div class="splash" id="spinner">
+        <center>
+            <div id="preLoading" class="preLoading">
+                <svg width='120px' height='120px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-balls">
+          <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+          <g transform="rotate(0 50 50)">
+            <circle r="5" cx="30" cy="50">
+              <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;19.999999999999996 -20"
+                keyTimes="0;1" />
+              <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#b3c430;#4c5630" />
+            </circle>
+          </g>
+          <g transform="rotate(90 50 50)">
+            <circle r="5" cx="30" cy="50">
+              <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;19.999999999999996 -20"
+                keyTimes="0;1" />
+              <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#4c5630;#f7faf8" />
+            </circle>
+          </g>
+          <g transform="rotate(180 50 50)">
+            <circle r="5" cx="30" cy="50">
+              <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;19.999999999999996 -20"
+                keyTimes="0;1" />
+              <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#f7faf8;#80aaf3" />
+            </circle>
+          </g>
+          <g transform="rotate(270 50 50)">
+            <circle r="5" cx="30" cy="50">
+              <animateTransform attributeName="transform" type="translate" begin="0s" repeatCount="indefinite" dur="1s" values="0 0;19.999999999999996 -20"
+                keyTimes="0;1" />
+              <animate attributeName="fill" dur="1s" begin="0s" repeatCount="indefinite" keyTimes="0;1" values="#80aaf3;#b3c430" />
+            </circle>
+          </g>
+        </svg>
+            </div>
+        </center>
+    </div>
+    <script type="text/javascript">
+        function doLoad() {
+            //var head = document.getElementsByTagName('head')[0];
+            //      var link = document.createElement('link');
+            //    link.rel = 'stylesheet';
+            //  link.type = 'text/css';
+            //link.href = 'styles/rayen.css';
+            //      link.media = 'all';
+            //    head.appendChild(link);
+            // Create an iframe:
+            var iframe = document.createElement('iframe');
+            // Put it in the document (but hidden):
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            // Wait for the iframe to be ready:
+            iframe.onload = () => {
+                // Ignore further load events:
+                iframe.onload = null;
+                // Write a dummy tag:
+                iframe.contentDocument.write('<streaming-element>');
+                // Get a reference to that element:
+                var streamingElement = iframe.contentDocument.querySelector('streaming-element');
+                // Pull it out of the iframe & into the parent document:
+                document.body.appendChild(streamingElement);
+                iframe.contentDocument.write('<script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper" async><\/script>');
+                // Keep writing content like above, and then when we're done:
+                iframe.contentDocument.write('</streaming-element>');
+                iframe.contentDocument.close();
+            };
+            // Initialise the iframe
+            iframe.src = '';
+        }
+
+        if (window.addEventListener)
+            window.addEventListener("load", doLoad, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", doLoad);
+        else
+            window.onload = doLoad;
+    </script>
+</body>
+
 </html>

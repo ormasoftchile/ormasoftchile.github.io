@@ -1,0 +1,13 @@
+<template>
+    <section class="row align-items-center justify-content-center">
+        <div repeat.for="item of solution">
+            <div class="card contSol">
+                <div class="content-box box-default animated fadeInUp animation-delay-10 contentSol">
+                    <img src="${item.image}" class="img-responsive center-block">
+                    <h4 class="content-box-title titleSol">${item.title}</h4>
+                    <p>${item.description}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

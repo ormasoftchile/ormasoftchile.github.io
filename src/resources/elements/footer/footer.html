@@ -1,0 +1,42 @@
+<template bindable="router">
+  <div id="footer">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md">
+          <div class="">
+            <h5>Mapa del sitio</h5>
+            <ul class="list-unstyled">
+              <li repeat.for="nav of router.navigation">
+                <a style.bind="white" href.bind="nav.href">${nav.title}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Contacto Ormasoft</h5>
+          <ul class="list-unstyled text-small">
+
+            <li class="text-muted">
+              <span>
+                <a style.bind="white" target="_blank" href="https://www.google.cl/maps/place/Av.+Sim%C3%B3n+Bol%C3%ADvar+1840,+%C3%91u%C3%B1oa,+Regi%C3%B3n+Metropolitana/data=!4m2!3m1!1s0x9662cf8f9cfbde71:0xb4978e8ef1197ce4?sa=X&ved=0ahUKEwijn8erjbzZAhWHD5AKHbiaCCgQ8gEIJDAA">
+                  Simón Bolívar 1840, Ñuñoa, Santiago de Chile
+                </a>
+              </span>
+            </li>
+            <li class="text-muted">
+              <span>
+                <a style.bind="white" href="mailto:contacto@ormasoft.cl">contacto@ormasoft.cl</a>
+              </span>
+            </li>
+          </ul>
+          <img src="img/logo-ormasoft-grande.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="theFooter">
+    <p class="d-block mb-3 text-muted">© 2014 - 2018 &nbsp;&nbsp;
+      <a style.bind="white" href="#"> Ormasoft</a>
+    </p>
+  </div>
+</template>

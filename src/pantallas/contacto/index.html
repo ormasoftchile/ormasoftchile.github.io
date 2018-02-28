@@ -1,0 +1,75 @@
+﻿<template>
+  <style>
+    #coloTxt {
+      color: black;
+    }
+    #exampleModal {
+      display: none;
+    }
+  </style>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Datos incorrectos!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              Favor ingresar los datos correspondientes. 
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- <header class="main-header">
+          <div class="container">
+            <h1 class="page-title">Contacto</h1>
+          </div>
+        </header>
+        <div class="col-md-12">
+            <contact-form name.bind="theMail.name" email.bind="theMail.email" message.bind="theMail.message"><div class="form-group">
+              <button  type="submit" class="btn btn-primary btn-block" click.trigger="sendData()">Enviar mensaje</button>
+            </div></contact-form>
+        </div> -->
+        <header class="main-header">
+          <div class="container">
+            <h1 class="page-title">Contacto</h1>
+          </div>
+        </header>
+        <div class="col-md-12">
+          <form >
+            <div class="form-group">
+              <label for="name">
+                <i class="fa fa-user" aria-hidden="true"></i> &nbsp; Nombre
+              </label>
+              <input id="coloTxt" class="form-control" value.bind="name & validate" type="text">
+            </div>
+            <div class="form-group">
+              <label for="email">
+                <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; Correo electrónico
+              </label>
+              <input id="coloTxt" class="form-control" value.bind="email & validate" type="email">
+            </div>
+            <div class="form-group">
+              <label>
+                <i class="fa fa-comment" aria-hidden="true"></i> &nbsp; Mensaje
+              </label>
+              <textarea id="coloTxt" value.bind="message & validate" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <button  type="submit" class="btn btn-primary btn-block" click.trigger="sendData()" data-target="#exampleModal">Enviar mensaje</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <iframe style="margin: 16px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9225305254354!2d-70.61472958465437!3d-33.45132480494354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf8f9cfbde71%3A0xb4978e8ef1197ce4!2zQXYuIFNpbcOzbiBCb2zDrXZhciAxODQwLCDDkXXDsW9hLCBSZWdpw7NuIE1ldHJvcG9saXRhbmE!5e0!3m2!1ses-419!2scl!4v1519243251454"
+          width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</template>

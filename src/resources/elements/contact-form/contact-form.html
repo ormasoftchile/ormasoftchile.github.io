@@ -1,0 +1,34 @@
+<template>
+  <style>
+   
+  </style>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="page-title">Contacto</h1>
+    </div>
+  </header>
+  <div class="col-md-12">
+    <!-- submit.trigger="sendMessage()" -->
+    <form>
+      <div class="form-group">
+        <label for="name">
+          <i class="fa fa-user" aria-hidden="true"></i> &nbsp; Nombre
+        </label>
+        <input id="coloTxt" class="form-control" value.bind="name" type="text">
+      </div>
+      <div class="form-group">
+        <label for="email">
+          <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; Correo electrónico
+        </label>
+        <input id="coloTxt" class="form-control" value.bind="email" type="email">
+      </div>
+      <div class="form-group">
+        <label>
+          <i class="fa fa-comment" aria-hidden="true"></i> &nbsp; Mensaje
+        </label>
+        <textarea id="coloTxt" value.bind="message" cols="30" rows="10" class="form-control"></textarea>
+      </div>
+      <slot></slot>
+    </form>
+  </div>
+</template>

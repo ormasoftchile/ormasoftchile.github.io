@@ -1,0 +1,45 @@
+<template>
+    <style>
+        #mediumBoxCont {
+            background-color: #DCDCDC;
+            width: 400px;
+            height: 500px;
+            margin-bottom: 20px;
+        }
+
+        #imageMD {
+            text-align: center;
+            width: 100%;
+            height: 200px;
+        }
+
+        #titMD {
+            margin: 8px;
+        }
+
+        #descripMD {
+            margin: 16px 8px;
+        }
+
+        #buttonMD {
+            margin: 8px;
+            color: #fff;
+            background-color: #f23630;
+        }
+
+        #card {
+            width: 18rem;
+            margin-bottom: 20px;
+        }
+    </style>
+    <div class="col-4">
+        <div class="card" id="card">
+            <img class="card-img-top" id="imageMD" src="${image}" alt="${image}">
+            <h5 class="card-title" id="titMD">${title}</h5>
+            <p class="card-text" id="descripMD">${description}</p>
+            <button class="btn btn-default" id="buttonMD" type="button">
+                <slot></slot>
+            </button>
+        </div>
+    </div>
+</template>
